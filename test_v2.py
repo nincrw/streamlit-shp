@@ -17,4 +17,9 @@ def read_data():
 
 data = read_data()
 
-st.write(data)
+# Random tweet
+st.sidebar.subheader('Show random tweet')
+random_tweet = st.sidebar.radio('Sentiment', ('positive','neutral','negative'))
+st.sidebar.markdown(data.query('airline_sentiment == @random_tweet')[['text']].sample(n=1).iat[0,0])
+
+# st.write(data)
