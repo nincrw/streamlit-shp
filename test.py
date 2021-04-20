@@ -16,13 +16,14 @@ st.sidebar.title('Sentiment of US Airlines Tweets')
 st.markdown('Interactive db to analyze the sentiment of Tweets 🐦')
 st.sidebar.markdown('Interactive db to analyze the sentiment of Tweets 🐦')
 
-data_path = r'C:\Users\ni.wathanyusakul\Downloads\PC\Dashboard'
+# data_path = r'C:\Users\ni.wathanyusakul\Downloads\PC\Dashboard'
 file_name = 'Tweets.csv'
 
 # Read CSV
 @st.cache(persist=True)
 def read_data():
-	data = pd.read_csv(data_path + '\\' + file_name)
+# 	data = pd.read_csv(data_path + '\\' + file_name)
+	data = pd.read_csv('\\' + file_name)
 	data['tweet_created'] = pd.to_datetime(data['tweet_created'])
 	return data
 
