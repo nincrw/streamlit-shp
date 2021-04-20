@@ -11,7 +11,8 @@ file_name = 'Tweets.csv'
 # Read CSV
 @st.cache(persist=True)
 def read_data():
-	data = pd.read_csv('https://github.com/nincrw/streamlit-shp/blob/main/' + file_name)
+# 	data = pd.read_csv('https://github.com/nincrw/streamlit-shp/blob/main/' + file_name)
+	data = pd.read_csv('https://raw.githubusercontent.com/nincrw/streamlit-shp/main/' + file_name)
 	data['tweet_created'] = pd.to_datetime(data['tweet_created'])
 	return data
 
