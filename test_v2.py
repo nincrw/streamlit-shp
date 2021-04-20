@@ -11,7 +11,7 @@ file_name = 'Tweets.csv'
 # Read CSV
 @st.cache(persist=True)
 def read_data():
-	data = pd.read_csv(data_path + '\\' + file_name)
+	data = pd.read_csv('\\' + file_name)
 	data['tweet_created'] = pd.to_datetime(data['tweet_created'])
 	return data
 
