@@ -25,4 +25,4 @@ st.sidebar.subheader('Show random tweet')
 random_tweet = st.sidebar.radio('Sentiment', ('positive','neutral','negative'))
 st.sidebar.markdown(data.query('airline_sentiment == @random_tweet')[['text']].sample(n=1).iat[0,0])
 
-# st.write(data)
+st.write(data)
