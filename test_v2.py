@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np 
 
+import base64
+
 def get_table_download_link_csv(df):
     #csv = df.to_csv(index=False)
     csv = df.to_csv().encode()
